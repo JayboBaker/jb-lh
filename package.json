@@ -1,0 +1,32 @@
+{
+  "name": "jb-lh",
+  "version": "1.0.0",
+  "description": "A/B testing function",
+  "main": "index.js",
+  "scripts": {
+    "test": "concurrently 'npm run lint' 'npm run test-spec'",
+    "test-spec": "mocha --require babel-polyfill --compilers js:babel-register --harmony",
+    "watch": "webpack --watch",
+    "watch-test": "nodemon --watch src --watch test --exec npm test",
+    "start": "webpack-dev-server --config webpack.development.config.js",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "build": "npm test && webpack -p"
+  },
+  "author": "James Baker",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "concurrently": "^3.4.0",
+    "mocha": "^3.4.1",
+    "nodemon": "^1.11.0",
+    "standard": "^10.0.2",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
