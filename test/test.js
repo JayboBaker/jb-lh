@@ -23,6 +23,14 @@ describe('LH', function () {
     })
   })
 
+  describe('reset', function () {
+    it('clears state', function () {
+      LH.push('largeButtons')
+      LH.reset()
+      assert.equal(LH.isEnabled('largeButtons'), false)
+    })
+  })
+
   describe('isEnabled', function () {
     beforeEach(() => {
       LH.push('largeButtons')
