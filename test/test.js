@@ -70,7 +70,14 @@ describe('LH', function () {
 
     it('returns correct string when all IDs have been defined', function () {
       LH.push('sortByPrice')
+      LH.push('largeButtons')
       LH.push('showRecentlyViewed')
+      assert.equal(LH.getEnabledIDs(), 'AF')
+    })
+
+    it('returns correct string when IDs have been defined in a different order', function () {
+      LH.push('showRecentlyViewed')
+      LH.push('sortByPrice')
       assert.equal(LH.getEnabledIDs(), 'AF')
     })
   })
