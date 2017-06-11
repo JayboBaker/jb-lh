@@ -1,4 +1,4 @@
-# Loveholidays A/B testing
+# A/B testing tool
 
 All you need is [node](https://nodejs.org/en/) which includes npm
 
